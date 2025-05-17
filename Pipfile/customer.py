@@ -1,8 +1,8 @@
 class customer:
     
-def __init__(self, name): 
- self.name = name
- self._orders = []
+ def __init__(self, name):
+  self.name = name
+  self._orders = []
   
 @property
 def name(self):
