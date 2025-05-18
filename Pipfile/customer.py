@@ -15,7 +15,7 @@ def name(self, value):
     if isinstance(value, str) and 1<= len(value) <= 15:
           self._name = value
     else:
-        raise Exception("Name must be a string between 1 and 15 characters")
+        raise ValueError("Name must be a string between 1 and 15 characters")
   
 @property
 def orders(self):
@@ -44,6 +44,6 @@ def most_aficiondo(cls, coffee):
       if total > max_spent:
        max_spent = total
        spender = customer
-       return spender
+      return spender
             
       
