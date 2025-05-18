@@ -16,3 +16,14 @@ def name(self, value):
           self._name = value
     else:
         raise Exception("Name must be a string between 1 and 15 characters")
+  
+@property
+def orders(self):
+      return self._orders
+
+@property
+def coffees(self):
+      return list({order.coffee for order in self._orders})
+
+@property
+def create_order(self,coffee,price):
