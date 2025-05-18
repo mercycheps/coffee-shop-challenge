@@ -40,5 +40,10 @@ def most_aficiondo(cls, coffee):
       spender = None
       max_spent = 0
       for customer in {order.customer for order in coffee.orders()}:
+            total = sum(order.price for order in coffee.orders() if order.customer == customer)
+      if total > max_spent:
+       max_spent = total
+       spender = customer
+       return spender
             
       
