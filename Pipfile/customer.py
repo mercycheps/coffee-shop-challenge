@@ -27,3 +27,18 @@ def coffees(self):
 
 @property
 def create_order(self,coffee,price):
+      from order import Order
+      new_order = Order(self,coffee,price)
+      self._orders.append(new_order)
+      coffee._orders.append(new_order)
+      return new_order
+      
+      
+@classmethod
+def most_aficiondo(cls, coffee):
+      from order import Order
+      spender = None
+      max_spent = 0
+      for customer in {order.customer for order in coffee.orders()}:
+            
+      
