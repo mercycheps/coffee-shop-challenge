@@ -12,5 +12,15 @@ class order:
      if not(isinstance(price, float) or isinstance(price, int)) or not (1.0 <= price <= 10.0):
          raise Exception("Price must be a float between 1.0 and 10.0")
      
-     
+@property
+def customer(self):
+    return self._customer
         
+@property
+def coffee(self):
+     return self._coffee
+ 
+@property
+def price(self):
+     return self._price
+ 
